@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>   
+<!-- Include this CDN for using icons     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body >
+    <!-- header section starts  -->
+   <header>
+<!--  This will contain the navigation menu -->
+   <!-- header section starts  -->
+   <header>
+    <section class="nav">
+        <!--  checkbox to control the icon's state    -->
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+          </label>
+        <!--  main menu    -->
+        <ul class="menu">
+             <li><a href="#home">Home</a></li>
+             <li> <a href="#review">Services</a></li>
+            <li><a href="#speciality">About</a></li>
+            <li> <a href="#popular">Stores</a></li>
+            <li> <a href="#review">Contact</a></li>
+            <li> <a href="#order" class="order">Menu</a></li>
+        </ul>
+    </section>
+</header>
+<!-- header section ends -->  
+</header>
+    <!-- header section ends -->
+    <!-- hero section starts  -->
+    <section class="hero">
+        <div class="intro-text">
+          <h1>
+            <span class="hear"> You can take a look at our designs </span> <br />
+            <!-- <span class="connecting"> Connecting...</span> -->
+          </h1>
+          <p>
+            An online streaming platform to find the Perfect Piece to Treasure Forever <br />
+            Let Your Beauty Shine with Our Finest Jewels!!!
+            
+          </p> 
+          <div class="btn">
+            
+            <button class="btn1">Login</button>
+            <button class="btn2">Sign Up</button>
+          
+          </div>         
+        </div>
+        
+        <!-- image slider -->
+        <div class="body1">
+    <div class="slider">
+      <img id="img-1" src="WhatsApp Image 2023-07-21 at 19.31.27.jpeg" alt="Image 1"/>
+      <img id="img-2" src="WhatsApp Image 2023-07-21 at 19.32.54.jpeg" alt="Image 2"/>
+      <img id="img-3" src="WhatsApp Image 2023-07-21 at 19.33.43.jpeg" alt="Image 3"/>
+    </div>
+    <div class="navigation-button">
+      <span class="dot" onclick="changeSlide(0)"></span>
+      <span class="dot" onclick="changeSlide(1)"></span>
+      <span class="dot" onclick="changeSlide(2)"></span>
+    </div>
+  </div>
+      </section>
+     
+      
+<!-- This will contain the brief description about our product (here, restaurant)  -->
+<!--  hero section ends -->
+</body>
+<script>
+  var imgs = document.querySelectorAll('.slider img');
+var dots = document.querySelectorAll('.dot');
+var currentImg = 0; // index of the first image 
+// const interval = 1000; // duration(speed) of the slide
+function changeSlide(n) {
+  for (var i = 0; i < imgs.length; i++) { // reset
+    imgs[i].style.opacity = 0;
+    dots[i].className = dots[i].className.replace(' active', '');
+  }
+
+  currentImg = n;
+
+  imgs[currentImg].style.opacity = 1;
+  dots[currentImg].className += ' active';
+}
+var timer = setInterval(changeSlide, interval);
+currentImg = (currentImg + 1) % imgs.length; // update the index number
+</script>
+</html>
